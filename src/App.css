@@ -1,38 +1,120 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+  width: 80%;
+  background: rgba(95,158,160, 0.5);
+}
+
+.header {
+  background: cadetblue;
+  padding: 1rem;
   text-align: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 2px 2px 5px #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-input {
+  margin: 20px auto;
+  width: 60%;
+  height: 2rem;
+  border-radius: 6px;
+  padding: 0 15px;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-btn {
+  height: 2rem;
+  border-radius: 6px;
+  width: 8rem;
+  margin: 0 10px;
+  color: cadetblue;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: white;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-btn:focus {
+  outline: none;
+}
+
+.recipewrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recipe { 
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 50px 20px 0 20px;
+  width: 25%;
+  height: 400px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 1px 1px 2px #000;
+}
+
+.label {
+  text-align: center;
+  font-size: 22px;
+  color: cadetblue;
+  padding: 0 10px;
+}    
+
+.recipeImg {
+  width: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details-btn {
+  text-decoration: none;
+  border-bottom: 2px solid rgba(95,158,160, 0.5);
+  color: cadetblue;
+  width: 100px;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: 600;
+}
+
+.details-btn:hover {
+  width: 125px;
+  transition: all 0.5s ease-out;
+}
+
+.show-btn {
+  width: 200px;
+  height: 2rem;
+  background: cadetblue;
+  border-radius: 8px;
+  border: none;
   color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.show-btn:hover {
+  border: none;
+  background: rgba(95,158,160, 0.8);
+  color: white;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ingredientList {
+  color: rgba(95,158,160, 0.8);
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
 }
